@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Teachers</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+
+        .header {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .content {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .options {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        button {
+            flex: 1 1 45%; /* Adjust button size */
+            padding: 15px;
+            background-color: #007bff; /* Main button color */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #0056b3; /* Button hover color */
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Manage Teachers</h1>
+    </div>
+    <div class="content">
+        <div class="options">
+            <a href="manage_teachers_permissions.html">
+                <button>Manage Permissions</button>
+            </a>
+            <a href="teacher_profile_page.html">
+                <button>Teacher Profile</button>
+            </a>
+            <a href="manage_classes.html">
+                <button>Manage Classes</button>
+            </a>
+            <a href="view_teacher_feedback.html">
+                <button>View Teacher Feedback</button>
+            </a>
+            <a href="leave__response_page.html">
+                <button>Admin Leave Response</button> <!-- Link to Admin Leave Response -->
+            </a>
+        </div>
+    </div>
+</body>
+</html>

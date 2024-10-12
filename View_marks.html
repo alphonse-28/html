@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Marks</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+
+        .header {
+            background-color: #007bff;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .content {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>View Marks</h1>
+    </div>
+
+    <div class="content">
+        <h2>Subject Information</h2>
+        <label>Subject: </label> <span id="subject-name"></span><br>
+
+        <h2>Marks</h2>
+        <label>Assignment Marks: </label> <span id="assignment-marks"></span> / <span id="assignment-out-of"></span><br>
+        <label>Presentation Marks: </label> <span id="presentation-marks"></span> / <span id="presentation-out-of"></span><br>
+        <label>Project Marks: </label> <span id="project-marks"></span> / <span id="project-out-of"></span><br>
+        <label>Exam Marks: </label> <span id="exam-marks"></span> / <span id="exam-out-of"></span><br>
+    </div>
+
+    <script>
+        // Fetch marks data from backend (API or database)
+        // Example static data for demo
+        const marksData = {
+            "subjectName": "Mathematics", // Example subject
+            "assignmentMarks": 85,
+            "assignmentOutOf": 100,
+            "presentationMarks": 90,
+            "presentationOutOf": 100,
+            "projectMarks": 75,
+            "projectOutOf": 100,
+            "examMarks": 88,
+            "examOutOf": 100
+        };
+
+        // Display the subject name
+        document.getElementById('subject-name').innerText = marksData.subjectName;
+
+        // Display the marks
+        document.getElementById('assignment-marks').innerText = marksData.assignmentMarks;
+        document.getElementById('assignment-out-of').innerText = marksData.assignmentOutOf;
+        document.getElementById('presentation-marks').innerText = marksData.presentationMarks;
+        document.getElementById('presentation-out-of').innerText = marksData.presentationOutOf;
+        document.getElementById('project-marks').innerText = marksData.projectMarks;
+        document.getElementById('project-out-of').innerText = marksData.projectOutOf;
+        document.getElementById('exam-marks').innerText = marksData.examMarks;
+        document.getElementById('exam-out-of').innerText = marksData.examOutOf;
+    </script>
+</body>
+</html>
+

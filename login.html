@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BDA College - Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 50px;
+            text-align: center;
+        }
+
+        .login-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            margin: auto;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+        }
+
+        input[type="text"], input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+    <script>
+        // Function to set the heading and title based on the user type
+        function setUserType() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const userType = urlParams.get('user');
+            const titleElement = document.querySelector('title');
+            const headingElement = document.querySelector('h2');
+
+            if (userType) {
+                switch (userType) {
+                    case 'admin':
+                        titleElement.innerText = 'BDA College - Admin Login';
+                        headingElement.innerText = 'BDA College Admin Login';
+                        break;
+                    case 'student':
+                        titleElement.innerText = 'BDA College - Student Login';
+                        headingElement.innerText = 'BDA College Student Login';
+                        break;
+                    case 'parent':
+                        titleElement.innerText = 'BDA College - Parent Login';
+                        headingElement.innerText = 'BDA College Parent Login';
+                        break;
+                    case 'teacher':
+                        titleElement.innerText = 'BDA College - Teacher Login';
+                        headingElement.innerText = 'BDA College Teacher Login';
+                        break;
+                    default:
+                        titleElement.innerText = 'BDA College - Login';
+                        headingElement.innerText = 'BDA College Login';
+                        break;
+                }
+            }
+        }
+
+        function handleLogin(event) {
+            event.preventDefault(); // Prevent form submission
+
+            const urlParams = new URLSearchParams(window.location.search);
+            const userType = urlParams.get('user');
+
+            // Redirect based on user type after "logging in"
+            switch (userType) {
+                case 'admin':
+                    window.location.href = 'admin_dashboard.html';
+                    break;
+                case 'student':
+                    window.location.href = 'student_dashboard.html';
+                    break;
+                case 'parent':
+                    window.location.href = 'parent_dashboard.html';
+                    break;
+                case 'teacher':
+                    window.location.href = 'teacher_dashboard.html';
+                    break;
+                default:
+                    alert('Invalid user type');
+            }
+        }
+    </script>
+</head>
+<body onload="setUserType()">
+    <div class="login-container">
+        <h2>BDA College Login</h2>
+        <form onsubmit="handleLogin(event)">
+            <input type="text" placeholder="Username" required>
+            <input type="password" placeholder="Password" required>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+</body>
+</html>

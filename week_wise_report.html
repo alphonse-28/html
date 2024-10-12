@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week Wise Attendance Report</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e9f5f9;
+        }
+
+        .header {
+            background-color: #2a9d8f;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .content {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #2a9d8f;
+            color: white;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #2a9d8f;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #218c77;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Week Wise Attendance Report</h1>
+    </div>
+    <div class="content">
+        <h2>Attendance Overview by Week</h2>
+        <p>This report shows attendance for each week.</p>
+        <table>
+            <tr>
+                <th>Week</th>
+                <th>Present Days</th>
+                <th>Absent Days</th>
+            </tr>
+            <tr>
+                <td>Week 1</td>
+                <td>5</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>Week 2</td>
+                <td>4</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>Week 3</td>
+                <td>5</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>Week 4</td>
+                <td>4</td>
+                <td>2</td>
+            </tr>
+        </table>
+        <button onclick="location.href='attendance.html'">Back to Attendance</button>
+    </div>
+</body>
+</html>
+

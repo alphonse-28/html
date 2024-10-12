@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Student Profile</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f4f7;
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            background-color: #2c786c;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .edit-profile {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            color: #2c786c;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #555;
+        }
+
+        .form-group input[type="text"],
+        .form-group input[type="email"],
+        .form-group input[type="date"],
+        .form-group input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+            color: #333;
+        }
+
+        .form-actions {
+            text-align: center;
+        }
+
+        .save-button {
+            padding: 10px 20px;
+            background-color: #2c786c;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .save-button:hover {
+            background-color: #235e53;
+        }
+
+        .back-button {
+            display: inline-block;
+            margin-bottom: 20px;
+            padding: 10px 20px;
+            background-color: #f05454;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .back-button:hover {
+            background-color: #d94747;
+        }
+
+        /* Responsive layout for smaller screens */
+        @media (max-width: 768px) {
+            .edit-profile {
+                padding: 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .form-group input[type="text"],
+            .form-group input[type="email"],
+            .form-group input[type="date"],
+            .form-group input[type="number"] {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>Edit Student Profile</h1>
+    </div>
+
+    <div class="edit-profile">
+        <h2>Edit Student Profile</h2>
+        <a href="dashboard.html" class="back-button">Back to Dashboard</a>
+        <form action="update_student_profile.php" method="POST"> <!-- Adjust the action as necessary -->
+            <div class="form-group">
+                <label for="student-id">Student ID</label>
+                <input type="text" id="student-id" name="student_id" value="BDA1234" disabled>
+            </div>
+            <div class="form-group">
+                <label for="surname">Surname</label>
+                <input type="text" id="surname" name="surname" value="Smith" required>
+            </div>
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" value="John" required>
+            </div>
+            <div class="form-group">
+                <label for="dob">Date of Birth</label>
+                <input type="date" id="dob" name="dob" value="2000-01-01" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" value="john.smith@example.com" required>
+            </div>
+            <div class="form-group">
+                <label for="course">Course</label>
+                <input type="text" id="course" name="course" value="B.Sc Computer Science" required>
+            </div>
+            <div class="form-group">
+                <label for="previous-subjects">Previous Subjects</label>
+                <input type="text" id="previous-subjects" name="previous_subjects" value="Mathematics, Physics, Chemistry" required>
+            </div>
+            <div class="form-group">
+                <label for="extracurricular-activities">Extracurricular Activities</label>
+                <input type="text" id="extracurricular-activities" name="extracurricular_activities" value="Football, Chess" required>
+            </div>
+            <div class="form-group">
+                <label for="gender">Gender</label>
+                <input type="text" id="gender" name="gender" value="Male" required>
+            </div>
+            <div class="form-group">
+                <label for="father-name">Father's Name</label>
+                <input type="text" id="father-name" name="father_name" value="David Smith" required>
+            </div>
+            <div class="form-group">
+                <label for="mother-name">Mother's Name</label>
+                <input type="text" id="mother-name" name="mother_name" value="Mary Smith" required>
+            </div>
+            <div class="form-group">
+                <label for="address">Address</label>
+                <input type="text" id="address" name="address" value="123, Main St, City, Country" required>
+            </div>
+            <div class="form-group">
+                <label for="student-mobile">Student Mobile Number</label>
+                <input type="text" id="student-mobile" name="student_mobile" value="9876543210" required>
+            </div>
+            <div class="form-group">
+                <label for="parent-mobile">Parent Mobile Number</label>
+                <input type="text" id="parent-mobile" name="parent_mobile" value="9123456789" required>
+            </div>
+            <div class="form-group">
+                <label for="admission-date">Admission Date</label>
+                <input type="date" id="admission-date" name="admission_date" value="2018-08-01" required>
+            </div>
+            <div class="form-group">
+                <label for="admission-quota">Admission Quota</label>
+                <input type="text" id="admission-quota" name="admission_quota" value="Merit" required>
+            </div>
+            <div class="form-group">
+                <label for="religion">Religion</label>
+                <input type="text" id="religion" name="religion" value="Christianity" required>
+            </div>
+            <div class="form-group">
+                <label for="category">Category</label>
+                <input type="text" id="category" name="category" value="General" required>
+            </div>
+            <div class="form-group">
+                <label for="blood-group">Blood Group</label>
+                <input type="text" id="blood-group" name="blood_group" value="B+" required>
+            </div>
+            <div class="form-group">
+                <label for="campus-type">Campus Type</label>
+                <input type="text" id="campus-type" name="campus_type" value="Urban" required>
+            </div>
+            <div class="form-group">
+                <label for="nationality">Nationality</label>
+                <input type="text" id="nationality" name="nationality" value="Indian" required>
+            </div>
+            <div class="form-group">
+                <label for="state">State</label>
+                <input type="text" id="state" name="state" value="Karnataka" required>
+            </div>
+            <div class="form-group">
+                <label for="district">District</label>
+                <input type="text" id="district" name="district" value="Bengaluru" required>
+            </div>
+            <div class="form-group">
+                <label for="annual-income">Annual Income</label>
+                <input type="number" id="annual-income" name="annual_income" value="500000" required>
+            </div>
+            <div class="form-group">
+                <label for="aadhar-number">Aadhar Number</label>
+                <input type="text" id="aadhar-number" name="aadhar_number" value="1234-5678-9012" required>
+            </div>
+            <div class="form-group">
+                <label for="admission-tc-number">Admission TC Number</label>
+                <input type="text" id="admission-tc-number" name="admission_tc_number" value="TC001234" required>
+            </div>
+            <div class="form-group">
+                <label for="sslc-percentage">SSLC Percentage</label>
+                <input type="number" id="sslc-percentage" name="sslc_percentage" value="85" required>
+            </div>
+            <div class="form-group">
+                <label for="plus2-percentage">Plus 2 Percentage</label>
+                <input type="number" id="plus2-percentage" name="plus2_percentage" value="90" required>
+            </div>
+            <div class="form-group">
+                <label for="ug-percentage">UG Percentage</label>
+                <input type="number" id="ug-percentage" name="ug_percentage" value="88" required>
+            </div>
+            <div class="form-actions">
+                <button type="submit" class="save-button">Save Changes</button>
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Feedback Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+
+        .header {
+            background-color: #007bff;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .content {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"], textarea {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        textarea {
+            height: 100px;
+        }
+
+        .form-actions {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .back-button {
+            display: inline-block;
+            margin-bottom: 20px;
+            text-decoration: none;
+            color: #007bff;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Student Feedback Form</h1>
+    </div>
+    <div class="content">
+        <a href="manage_students.html" class="back-button">Back to Manage Students</a>
+        <form>
+            <div class="form-group">
+                <label for="student-name">Your Name</label>
+                <input type="text" id="student-name" placeholder="Enter your name" required>
+            </div>
+            <div class="form-group">
+                <label for="teacher-name">Teacher's Name</label>
+                <input type="text" id="teacher-name" placeholder="Enter teacher's name" required>
+            </div>
+            <div class="form-group">
+                <label for="feedback">Feedback</label>
+                <textarea id="feedback" placeholder="Enter your feedback here" required></textarea>
+            </div>
+            <div class="form-actions">
+                <button type="submit">Submit Feedback</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

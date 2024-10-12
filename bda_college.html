@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BDA College</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        .header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 2em;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: center;
+            background-color: #34495e;
+        }
+
+        .navbar a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+        }
+
+        .navbar a:hover {
+            background-color: #2980b9;
+        }
+
+        .main-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px;
+        }
+
+        .main-content img {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .description-box {
+            margin-top: 30px;
+            background-color: white;
+            padding: 20px;
+            width: 50%;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        .description-box p {
+            font-size: 1.2em;
+        }
+
+        @media (max-width: 768px) {
+            .description-box {
+                width: 80%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .description-box {
+                width: 90%;
+            }
+
+            .navbar a {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>Big Data University</h1>
+    </div>
+
+    <div class="navbar">
+        <a href="login.html?user=admin">Admin</a>
+        <a href="login.html?user=student">Student</a>
+        <a href="login.html?user=parent">Parent</a>
+        <a href="login.html?user=teacher">Teacher</a>
+    </div>
+
+    <div class="main-content">
+        <!-- Placeholder for Class Group Picture -->
+        <img src="group_photo.jpg" alt="Class Group Photo">
+
+        <div class="description-box">
+            <h2>About BDA College</h2>
+            <p>BDA College is a premier institution offering top-tier education and resources for students, teachers, and parents to collaborate and excel.</p>
+        </div>
+    </div>
+
+</body>
+</html>

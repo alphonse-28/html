@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Fees</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e9f5f9;
+            padding: 20px;
+        }
+        .header {
+            background-color: #2a9d8f;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .content {
+            max-width: 600px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .content label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        .content span {
+            display: block;
+            margin-bottom: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button[disabled] {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Fees Status</h1>
+    </div>
+    <div class="content">
+        <label for="regNo">Register Number:</label>
+        <span id="regNo"></span> <!-- This will be populated from the database -->
+
+        <label for="name">Student Name:</label>
+        <span id="name"></span> <!-- This will be populated from the database -->
+
+        <label for="fees-status">Fees Status:</label>
+        <span id="fees-status"></span> <!-- This will be populated from the database -->
+
+        <button id="pay-fees-button" disabled>Pay Fees</button>
+    </div>
+
+    <script>
+        // Simulated function to fetch data from the database
+        function fetchFeesData() {
+            // Replace this simulated data with actual data fetched from your database
+            return {
+                regNo: "12345", // Fetch from the database
+                studentName: "John Doe", // Fetch from the database
+                feesStatus: "Paid" // Fetch from the database
+            };
+        }
+
+        // Populate the page with fetched data
+        const data = fetchFeesData();
+        document.getElementById('regNo').textContent = data.regNo;
+        document.getElementById('name').textContent = data.studentName;
+        document.getElementById('fees-status').textContent = data.feesStatus;
+
+        // Disable the Pay Fees button if fees status is "Paid"
+        const payFeesButton = document.getElementById('pay-fees-button');
+        if (data.feesStatus === "Paid") {
+            payFeesButton.disabled = true;
+        } else {
+            payFeesButton.onclick = function() {
+                window.location.href = 'fees_payment.html';
+            };
+        }
+    </script>
+</body>
+</html>
+
+

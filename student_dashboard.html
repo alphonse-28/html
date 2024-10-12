@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: #3498db;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+        }
+        .dashboard {
+            display: flex;
+            justify-content: space-around;
+            margin: 20px;
+            flex-wrap: wrap;
+        }
+        .card {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            width: 22%;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            margin: 10px;
+        }
+        .card h3 {
+            margin-bottom: 15px;
+            font-size: 1.2em;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #2980b9;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1em;
+        }
+        button:hover {
+            background-color: #1a6690;
+        }
+        @media (max-width: 768px) {
+            .card {
+                width: 45%;
+            }
+        }
+        @media (max-width: 480px) {
+            .card {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Student Dashboard</h1>
+    </div>
+    <div class="dashboard">
+        <div class="card">
+            <h3>View Profile</h3>
+            <button onclick="window.location.href='student_profile.html'">Profile</button>
+        </div>
+        <div class="card">
+            <h3>View Marks</h3>
+            <button onclick="window.location.href='view_marks.html'">Marks</button>
+        </div>
+        <div class="card">
+            <h3>View Attendance</h3>
+            <button onclick="window.location.href='view_attendance.html'">Attendance</button>
+        </div>
+        <div class="card">
+            <h3>Leave Requests</h3>
+            <button onclick="window.location.href='student_leave_request_submission.html'">Leave Request</button> <!-- Connects to leave request submission page -->
+        </div>
+        <div class="card">
+            <h3>Leave Status</h3>
+            <button onclick="window.location.href='student_leave_status.html'">Check Leave Status</button> <!-- Connects to leave status page -->
+        </div>
+    </div>
+</body>
+</html>
